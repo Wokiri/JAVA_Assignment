@@ -1,0 +1,26 @@
+{
+    "name": "mysql_db",
+    "version": "1.0.0",
+    "description": "Node package for MySQL development",
+    "main": "education.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Wokiri/JAVA_Assignment.git"
+    },
+    "keywords": [
+        "MySQL",
+        "node"
+    ],
+    "author": "Joe Wokiri",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Wokiri/JAVA_Assignment/issues"
+    },
+    "homepage": "https://github.com/Wokiri/JAVA_Assignment#readme",
+    "dependencies": {
+        "mysql": "^2.18.1"
+    }
+}
