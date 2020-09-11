@@ -20,6 +20,7 @@
 2. Task two: Reversing string characters in groups of four.
 3. Create DB tables, and Inserting data
 4. MySQL query: MySQL query that will display the number of students per course per institution.
+5. Rectified bugs in both tasks 1.
 
 ****
 

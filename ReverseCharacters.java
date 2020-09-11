@@ -1,16 +1,12 @@
 /*
-
 Loop through the string items
 Append each character to a temporary variable until they are four characters
 For every complete temporary variable, add it to an array, and then soon after empty the temporary variable
-
 In the Array:
 Loop through the items (strings) in the array
 For every item, reverse the order of the characters
 Put them in another array
-
 From the items in this new array, make a statement of reversed  characters in groups of four.
-
 */
 
 import java.lang.Math;
