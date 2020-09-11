@@ -10,9 +10,8 @@ Subtract an item from the proceeding item:
 
 public class MissingInteger{
 
-    // Method that sorts array items in ascending order; and returns the missing interger
-    static int sortItemsInArray(int[] inputArray){
-        int missingValue = 0;
+    // Method that sorts array items in ascending order; 
+    static int[] sortItemsInArray(int[] inputArray){
         int swapVariable = 0;
             for(int items = 0; items < inputArray.length; items++){
                 for(int items2 = items + 1; items2 < inputArray.length; items2++){
@@ -20,22 +19,40 @@ public class MissingInteger{
                         swapVariable=  inputArray[items];
                         inputArray[items] = inputArray[items2];
                         inputArray[items2] = swapVariable;
-
-                        missingValue = inputArray[inputArray.length - 1] + 1;
-
-                        if(inputArray[items2] - inputArray[items] != 1){
-                            missingValue = inputArray[items] + 1;
-                        }
                     }
                 }
             }
-            
-        return missingValue;
+        return inputArray;
+    }
+
+    // A method that returns the missing interger
+    static int missingIntegerIs(int[] sortedArray){
+        int missingInt = 0;
+        int loops = 0;
+        while (loops < sortedArray.length) {
+
+            if(sortedArray[0] != 1){
+                missingInt = 1;
+                break;
+            }
+
+            if (loops != sortedArray.length - 1 && sortedArray[loops + 1] - sortedArray[loops] != 1) {
+                missingInt = sortedArray[loops] + 1;
+                break;
+            } else if(loops == sortedArray.length - 1){
+                missingInt = sortedArray[loops] + 1;
+                break;
+            }
+            loops++;
+        }
+        return missingInt;
     }
 
 
     public static void main(String[] args){
-        int[] integers = {3, 5, 4, 1};
-        System.out.println(sortItemsInArray(integers));
+        int[] integers = {9, 4, 2, 7, 8, 6, 10, 1, 5}; // 3 is missing
+        int[]sortedArray = sortItemsInArray(integers);
+        int missingInteger = missingIntegerIs(sortedArray);
+        System.out.println(missingInteger); // Output is 3
     }
 }
